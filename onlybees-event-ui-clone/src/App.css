@@ -1,0 +1,386 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    line-height: 1.6;
+    padding-bottom: 120px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Loading Spinner */
+.loader-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    border: 4px solid #00FF38;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loader-container p {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+/* Header */
+.header {
+    background-color: #1E1E1E;
+    border-bottom: 1px solid #3A3A3A;
+    padding: 16px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.header-logo {
+    height: 32px;
+}
+
+/* Event Hero Section */
+.event-hero {
+    background-color: #1E1E1E;
+    padding: 32px 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.hero-poster {
+    width: 100%;
+    max-width: 400px;
+}
+
+.hero-poster img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero-details {
+    flex: 1;
+    color: #FFFFFF;
+}
+
+.hero-details h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #00FF38;
+    flex-shrink: 0;
+}
+
+/* Venue Layout */
+.venue-layout {
+    background-color: #2A2A2A;
+    padding: 32px 0;
+}
+
+.venue-layout h2 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.venue-image {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.venue-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Ticket Selection */
+.ticket-selection {
+    background-color: #1E1E1E;
+    padding: 32px 0;
+}
+
+.ticket-selection h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.ticket-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ticket Card */
+.ticket-card {
+    background-color: #2A2A2A;
+    border: 1px solid #3A3A3A;
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.3s ease;
+}
+
+.ticket-card:hover {
+    border-color: #00FF38;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 16px;
+}
+
+.ticket-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.ticket-availability {
+    font-size: 14px;
+    color: #A0A0A0;
+}
+
+.ticket-price-box {
+    text-align: right;
+}
+
+.ticket-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00FF38;
+}
+
+.price-label {
+    font-size: 14px;
+    color: #A0A0A0;
+}
+
+.ticket-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #3A3A3A;
+}
+
+.controls-label {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2A2A2A;
+    border: 1px solid #3A3A3A;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover:not(:disabled) {
+    background-color: #00FF38;
+    color: #000000;
+}
+
+.qty-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.quantity-display {
+    font-size: 18px;
+    font-weight: 600;
+    min-width: 32px;
+    text-align: center;
+}
+
+.ticket-subtotal {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #3A3A3A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtotal-label {
+    color: #A0A0A0;
+}
+
+.subtotal-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* Checkout Bar */
+.checkout-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2A2A2A;
+    border-top: 2px solid #00FF38;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 16px 0;
+}
+
+.checkout-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.checkout-summary {
+    display: flex;
+    gap: 32px;
+}
+
+.summary-item {
+    text-align: center;
+}
+
+.summary-label {
+    font-size: 14px;
+    color: #A0A0A0;
+    margin-bottom: 4px;
+}
+
+.summary-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.summary-value-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00FF38;
+}
+
+.checkout-btn {
+    background-color: #00FF38;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.checkout-btn:hover {
+    filter: brightness(1.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hero-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .hero-poster {
+        max-width: 350px;
+    }
+
+    .hero-details h1 {
+        font-size: 48px;
+    }
+
+    .ticket-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .checkout-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .checkout-btn {
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-details h1 {
+        font-size: 56px;
+    }
+}
